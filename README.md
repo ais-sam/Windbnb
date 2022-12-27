@@ -26,12 +26,17 @@
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Overview](#overview)
   - [Built With](#built-with)
 - [Features](#features)
-- [How to use](#how-to-use)
-- [Contact](#contact)
+- [How To Use](#how-to-use)
 - [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
+- [Colors](#colors)
+- [Fonts](#fonts)
+  - [Muli](#muli)
+  - ['Montserrat'](#montserrat)
 
 <!-- OVERVIEW -->
 
@@ -90,3 +95,31 @@ $ npm start
 - Website [your-website.com](https://{your-web-site-link})
 - GitHub [@your-username](https://{github.com/your-usermame})
 - Twitter [@your-twitter](https://{twitter.com/your-username})
+
+# My work plan
+1. Define colors +
+2. Define fonts (family, weight, size) +
+3. Define components
+4. Define functionalities
+5. Define the user story
+6. Explain every functionality + link it to the code (state, hook, functions)
+7. Define different states
+8. Code the UI
+    - add colors + fonts to tailwind config
+1. Add the logic
+## Colors
+- w-pink : #EB5757
+- w-black : #333333
+- w-gray : #4F4F4F
+- w-gray-2 : #828282
+- w-gray-3 : #BDBDBD (search bar text)
+
+## Fonts 
+### Muli 
+-for search title + search suggestions
+- font weights : 400, 500, 700, 800
+- font sizes : 9px, 14px, 
+### 'Montserrat' 
+-for text
+-font weights : 500, 600, 700
+- font sizes : 12px, 14px, 16px, 24px
