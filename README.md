@@ -121,16 +121,17 @@ $ npm start
 - font sizes : 12px, 14px, 16px, 24px
 
 ## Components
-- Navbar
-- SearchBar
-- logo
-- SearchButton
-- LocationFilter = Input + LocationFilterResutl
-- GuestFilter = Input + AdultFilter + ChildrenFilter
-- FilterDrawer = LocationFilter + GuestFilter + SearchButton
-- title
-- card
-- CardsGrid
+- Navbar +
+- SearchBar +
+- logo +
+- Button + 
+- Input + 
+- LocationFilter = Input + LocationFilterResutl + 
+- GuestFilter = Input + Age filter (AdultFilter + ChildrenFilter) +
+- FilterDrawer = LocationFilter + GuestFilter + Button
+- title +
+- card +
+- CardsGrid +
 
 ## Functionalities
 - the user open the app =>  a list of cards of a specific region is displayed
