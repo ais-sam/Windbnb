@@ -26,17 +26,13 @@
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Overview](#overview)
-  - [Built With](#built-with)
-- [Features](#features)
-- [How To Use](#how-to-use)
-- [Acknowledgements](#acknowledgements)
-- [Contact](#contact)
-- [Colors](#colors)
-- [Fonts](#fonts)
-  - [Muli](#muli)
-  - ['Montserrat'](#montserrat)
+- [My work plan](#my-work-plan)
+  - [Colors](#colors)
+  - [Fonts](#fonts)
+    - [Muli](#muli)
+    - ['Montserrat'](#montserrat)
+  - [Components](#components)
+  - [Functionalities](#functionalities)
 
 <!-- OVERVIEW -->
 
@@ -99,9 +95,9 @@ $ npm start
 # My work plan
 1. Define colors +
 2. Define fonts (family, weight, size) +
-3. Define components
-4. Define functionalities
-5. Define the user story
+3. Define components + 
+4. Define functionalities +
+5. Define the user story +
 6. Explain every functionality + link it to the code (state, hook, functions)
 7. Define different states
 8. Code the UI
@@ -123,3 +119,32 @@ $ npm start
 -for text
 -font weights : 500, 600, 700
 - font sizes : 12px, 14px, 16px, 24px
+
+## Components
+- Navbar
+- SearchBar
+- logo
+- SearchButton
+- LocationFilter = Input + LocationFilterResutl
+- GuestFilter = Input + AdultFilter + ChildrenFilter
+- FilterDrawer = LocationFilter + GuestFilter + SearchButton
+- title
+- card
+- CardsGrid
+
+## Functionalities
+- the user open the app =>  a list of cards of a specific region is displayed
+                        - the region is displayed in the search bar
+                        - number of stays = number of stays of the region
+                        - Title = stays in [region]
+- the user clicks on the searchBar => - the FilterDrawer is opened
+                                      -  the user can search new location
+                                      -  the user start typing => the list of location appears
+                                      -  when the user starts typing the available location appear
+                                      -  when select a location the other locations will be hidden and the selected location placed in the input
+                                      -  When he clicks on the guest filter input => Adult/Children filters appear
+                                      -  the user can specify number of gusts = number of Children + adults
+  
+- if the user clicks on the location search => open the Location Filter
+- if the user clicks on the Guest search => open the Guest Filter
+- if the user clicks on the search icon => the FilterDraw will be opened without any filter 
