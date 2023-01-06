@@ -1,7 +1,7 @@
 import React from 'react'
 
-const LocationFilterResults = () => {
-  const cities =["Helsinki, Finland","Turku, Finland","Oulu, Finland","Vaasa, Finland"]
+const CityList = () => {
+    const cities =["Helsinki, Finland","Turku, Finland","Oulu, Finland","Vaasa, Finland"]
   return (
     <ul className='font-muli text-w-gray mt-10 pl-4'>
         {cities.map((city,index)=><li key={index} className="my-4">{city}</li>)}
@@ -9,4 +9,4 @@ const LocationFilterResults = () => {
   )
 }
 
-export default LocationFilterResults
+export default CityList
