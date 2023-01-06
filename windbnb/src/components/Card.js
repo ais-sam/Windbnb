@@ -4,7 +4,7 @@ const Card = ({stay}) => {
   const {city,country,superHost,title,rating,maxGuests,type,beds,photo} = stay
   return (
     <div>
-      <div className='rounded-xl overflow-hidden max-h-64'>
+      <div className='rounded-3xl overflow-hidden max-h-64'>
         <img src={photo} className="object-top"/>
       </div>
 
@@ -13,9 +13,9 @@ const Card = ({stay}) => {
           <div className='flex items-center justify-between mb-2'>
             <div className='flex items-center justify-between gap-2'>
               {superHost ?
-              <span className='uppercase text-xs text-w-gray font-bold border border-w-gray p-2 rounded-2xl '>super host</span>
+              <span className='uppercase text-xs text-w-gray font-bold border border-w-gray p-1 px-[6px] rounded-xl '>super host</span>
                : null}
-              <div className='text-w-gray-2 font-normal text-sm '>
+              <div className='text-w-gray-2 font-normal text-sm p-1'>
                 <span >{type}</span>
                 <span>. {beds} beds</span>
               </div>

@@ -3,7 +3,7 @@ import Home from "./pages/Home"
 
 function App() {
   return (
-    <div className="App">
+    <div className="relative">
       <Home/>
       {/* <header className="App-header">
         <h1 className='bg-red-300 text-center mt-24 font-montserrat'>Windbnb</h1>

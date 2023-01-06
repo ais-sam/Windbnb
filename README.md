@@ -33,6 +33,7 @@
     - ['Montserrat'](#montserrat)
   - [Components](#components)
   - [Functionalities](#functionalities)
+  - [TO DO](#to-do)
 
 <!-- OVERVIEW -->
 
@@ -149,3 +150,7 @@ $ npm start
 - if the user clicks on the location search => open the Location Filter
 - if the user clicks on the Guest search => open the Guest Filter
 - if the user clicks on the search icon => the FilterDraw will be opened without any filter 
+
+## TO DO
+- make the image height for all cards the same.
+- 
