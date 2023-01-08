@@ -11,10 +11,11 @@ const FilterDrawer = () => {
           <Input type='guests'/>
           <Button className="hidden md:flex"/>
       </div>
-      <div className='container flex items-center justify-between gap-4'>
-        <LocationFilterResults/>
-        <GuestsFilter/>
-        <Button className="md:hidden"/>
+      <div className='container flex items-center  gap-4 mt-10'>
+        <LocationFilterResults className="basis-1/2"/>
+        <GuestsFilter className="basis-1/3"/>
+        {/* <Button className=""/> */}
+        
       </div>
 
     </div>
@@ -22,3 +23,8 @@ const FilterDrawer = () => {
 }
 
 export default FilterDrawer
+
+// TO DO:
+/*
+- make the same space for the 02 lines => use (basis-1/3 for each    or   tyr grid)
+*/

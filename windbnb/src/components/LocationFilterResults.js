@@ -1,10 +1,10 @@
 import React from 'react'
 
-const LocationFilterResults = () => {
+const LocationFilterResults = ({className}) => {
   const cities =["Helsinki, Finland","Turku, Finland","Oulu, Finland","Vaasa, Finland"]
   return (
-    <ul className='font-muli text-w-gray mt-10 pl-4'>
-        {cities.map((city,index)=><li key={index} className="my-4">{city}</li>)}
+    <ul className={`${className} font-muli text-w-gray pl-4`}>
+        {cities.map((city,index)=><li key={index} className="mb-4">{city}</li>)}
     </ul>
   )
 }
