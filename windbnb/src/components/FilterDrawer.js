@@ -3,9 +3,11 @@ import Input from './Input'
 import Button from './Button'
 import LocationFilterResults from './LocationFilterResults'
 import GuestsFilter from "./GuestsFilter"
+import EditSearch from './EditSearch'
 const FilterDrawer = () => {
   return (
-    <div className='absolute w-full h-[93vh] md:h-[70vh]  left-0 -top-4 pt-6 pb-11 bg-white'>
+    <div className='absolute w-full h-[98vh] md:h-[70vh]  left-0 -top-4 pt-6 pb-11 bg-white'>
+     <EditSearch/>
       <div className='flex items-center justify-between container shadow-sm rounded-2xl px-2'>
         <div className='basis-full md:basis-4/5 md:flex  md:flex-row md:items-center '>
           <Input type='location' className="w-full md:basis-1/2 mb-1 md:mb-0"/>
