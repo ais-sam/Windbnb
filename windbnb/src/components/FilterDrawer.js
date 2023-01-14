@@ -6,7 +6,7 @@ import GuestsFilter from "./GuestsFilter"
 import EditSearch from './EditSearch'
 const FilterDrawer = () => {
   return (
-    <div className='absolute w-full h-[98vh] md:h-[70vh]  left-0 -top-4 pt-6 pb-11 bg-white'>
+    <div className='absolute w-full h-[98vh] md:h-[70vh]  left-0 -top-4 pt-6 pb-11 bg-white z-20'>
      <EditSearch/>
       <div className='flex items-center justify-between container shadow-sm rounded-2xl px-2'>
         <div className='basis-full md:basis-4/5 md:flex  md:flex-row md:items-center '>
