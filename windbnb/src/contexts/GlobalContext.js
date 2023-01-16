@@ -1,35 +1,26 @@
-import { createContext, useContext, useReducer,useState } from "react";
-import { globalReducer, initialStates } from "../reducers/globalReducer";
+import { createContext, useContext,useState } from "react";
+
 
 
 // create context
-export const GlobalContext = createContext(initialStates)
+export const GlobalContext = createContext()
 
 // create context provider
 export const GlobalProvider = ({childern}) => {
-  // const [state, dispatch] = useReducer(globalReducer,initialStates)
   const [isModal,setModal] = useState(false)
+  const [isCities,setCities] = useState(false)
+  const [isGuestFilters,setGuestFilters] = useState(false)
 
-  // show / hide the FilterDrawer
-  // const showFilter = ()=>{
-  //   dispatch({
-  //     type: "SHOW_MODAL"
-  //   })
-  // }
+  const value = {
+    isModal,setModal,
+    isCities,setCities,
+    isGuestFilters,setGuestFilters
+  }
 
-  // value (useReducer)
-  // const value = {
-  //   isModal : state.isModal,
-  //   showFilter:()=>{
-  //     dispatch({
-  //       type: "INCREMENT"
-  //     })
-  //   }
-  // }
-  // value (useState)
-  const value = {isModal,setModal}
   return (
-    <GlobalContext.Provider value={value}>
+    <GlobalContext.Provider value={{isModal,setModal,
+      isCities,setCities,
+      isGuestFilters,setGuestFilters}}>
         {childern}
     </GlobalContext.Provider>
   )
