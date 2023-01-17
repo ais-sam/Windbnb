@@ -7,16 +7,20 @@ import useGlobal from './contexts/GlobalContext';
 
 
 function App() {
-  // const [isModal,setModal] = useState(false)
-  // const {isModal,setModal,isCities,setCities,isGuestFilters,setGuestFilters} = useGlobal()
+  // show / hide modal
   const [isModal,setModal] = useState(false)
+  // show / hide cities search results
   const [isCities,setCities] = useState(false)
+  // show / hide guest filters
   const [isGuestFilters,setGuestFilters] = useState(false)
+  // number of guest
+  const [geustNumber,setGuestNumber] = useState(0)
 
   const value = {
     isModal,setModal,
     isCities,setCities,
-    isGuestFilters,setGuestFilters
+    isGuestFilters,setGuestFilters,
+    geustNumber,setGuestNumber
   }
   return (
     <GlobalContext.Provider value={value}>

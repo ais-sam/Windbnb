@@ -1,12 +1,13 @@
-import React from 'react'
-import useGlobal from '../contexts/GlobalContext'
+import React, { useContext } from 'react'
+import { GlobalContext } from '../contexts/GlobalContext'
 import Button from './Button'
 import EditSearch from './EditSearch'
 import FilterInputs from './FilterInputs'
 import GuestsFilter from "./GuestsFilter"
 import LocationFilterResults from './LocationFilterResults'
 const FilterDrawer = () => {
-  const {isCities,isGuestFilters} = useGlobal()
+  const {isCities,isGuestFilters} = useContext(GlobalContext)
+  
   return (
     <div className='absolute w-full h-[98vh] md:h-[70vh]  left-0 -top-4 pt-6 pb-11 bg-white z-20'>
      <EditSearch/>
