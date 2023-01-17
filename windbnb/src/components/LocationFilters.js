@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LocationFilterResults = ({className}) => {
+const LocationFilters = ({className}) => {
   const cities =["Helsinki, Finland","Turku, Finland","Oulu, Finland","Vaasa, Finland"]
   return (
     <ul className={`${className} font-muli text-w-gray md:pl-4`}>
@@ -9,4 +9,4 @@ const LocationFilterResults = ({className}) => {
   )
 }
 
-export default LocationFilterResults
+export default LocationFilters
