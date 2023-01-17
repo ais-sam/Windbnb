@@ -1,9 +1,7 @@
-import './App.css';
-import Home from "./pages/Home"
 import { useState } from 'react';
-import {GlobalProvider} from './contexts/GlobalContext';
+import './App.css';
 import { GlobalContext } from './contexts/GlobalContext';
-import useGlobal from './contexts/GlobalContext';
+import Home from "./pages/Home";
 
 
 function App() {
@@ -14,13 +12,13 @@ function App() {
   // show / hide guest filters
   const [isGuestFilters,setGuestFilters] = useState(false)
   // number of guest
-  const [geustNumber,setGuestNumber] = useState(0)
+  const [totalGuest,setTotalGuest] = useState(0)
 
   const value = {
     isModal,setModal,
     isCities,setCities,
     isGuestFilters,setGuestFilters,
-    geustNumber,setGuestNumber
+    totalGuest,setTotalGuest
   }
   return (
     <GlobalContext.Provider value={value}>
