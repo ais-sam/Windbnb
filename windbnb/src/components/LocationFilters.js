@@ -1,4 +1,3 @@
-import React from 'react'
 import { useFilterContext } from '../contexts/FilterContext'
 import { locations as cities } from '../utils/locations'
 import LocationItem from './LocationItem'
