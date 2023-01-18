@@ -18,9 +18,7 @@ export const GlobalProvider = ({childern}) => {
   }
 
   return (
-    <GlobalContext.Provider value={{isModal,setModal,
-      isCities,setCities,
-      isGuestFilters,setGuestFilters}}>
+    <GlobalContext.Provider value={value}>
         {childern}
     </GlobalContext.Provider>
   )
