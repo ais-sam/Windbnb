@@ -1,15 +1,27 @@
-import React, { useContext } from 'react'
-import { FilterContext, useFilterContext } from '../contexts/FilterContext'
+import React from 'react'
+import { useFilterContext } from '../contexts/FilterContext'
+import { locations as cities } from '../utils/locations'
+import LocationItem from './LocationItem'
+
 
 const LocationFilters = ({className}) => {
-  const {city} = useFilterContext()
-  const cities =["Helsinki, Finland","Turku, Finland","Oulu, Finland","Vaasa, Finland"]
+  const {location,setLocation} = useFilterContext()
+
+  const filterdCities = cities.filter(el=>{
+    return el.toLocaleLowerCase().includes(location.toLocaleLowerCase())
+  })
+
+  const selectLocation = (selectedCity)=>{
+    setLocation(selectedCity)
+  }
   return (
     <ul className={`${className} font-muli text-w-gray md:pl-4`}>
-        {cities.map((city,index)=><li key={index} className="mb-4"><i class="fas fa-map-marker-alt"></i> {city}</li>)}
-      <p>my city : {city}</p>
+        {(location ? filterdCities : cities).map((city,index)=>{
+          return <LocationItem key={index} onClick={()=>selectLocation(city)} city={city}/>
+        })}
     </ul>
   )
+  
 }
 
 export default LocationFilters

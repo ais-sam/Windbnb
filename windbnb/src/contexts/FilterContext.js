@@ -3,9 +3,9 @@ import { createContext, useState,useContext } from "react";
 export const FilterContext = createContext();
 
 export const FilterProvider = ({ children }) => {
-  const [city, setCity] = useState();
+  const [location, setLocation] = useState('');
   const [guests, setGuests] = useState();
-  const value = { city, setCity, guests, setGuests };
+  const value = { location, setLocation, guests, setGuests };
 
   return (
     <FilterContext.Provider value={value}>
