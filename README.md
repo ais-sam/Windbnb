@@ -139,17 +139,17 @@ $ npm start
                         - the region is displayed in the search bar
                         - number of stays = number of stays of the region
                         - Title = stays in [region]
-- the user clicks on the searchBar => - the FilterDrawer is opened
-                                      -  the user can search new location
-                                      -  the user start typing => the list of location appears
-                                      -  when the user starts typing the available location appear
-                                      -  when select a location the other locations will be hidden and the selected location placed in the input
-                                      -  When he clicks on the guest filter input => Adult/Children filters appear
-                                      -  the user can specify number of gusts = number of Children + adults
+- the user clicks on the searchBar => - the FilterDrawer is opened +
+                                      -  the user can search new location +
+                                      -  the user start typing => the list of location appears +
+                                      -  when the user starts typing the available location appear +
+                                      -  when select a location the other locations will be hidden and the selected location placed in the input +
+                                      -  When he clicks on the guest filter input => Adult/Children filters appear + 
+                                      -  the user can specify number of gusts = number of Children + adults +
   
-- if the user clicks on the location search => open the Location Filter
-- if the user clicks on the Guest search => open the Guest Filter
-- if the user clicks on the search icon => the FilterDraw will be opened without any filter 
+- if the user clicks on the location search => open the Location Filter +
+- if the user clicks on the Guest search => open the Guest Filter +
+- if the user clicks on the search icon => the FilterDraw will be opened without any filter +
 
 ## TO DO
 - make the image height for all cards the same.
