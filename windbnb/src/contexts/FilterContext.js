@@ -4,8 +4,10 @@ export const FilterContext = createContext();
 
 export const FilterProvider = ({ children }) => {
   const [location, setLocation] = useState('');
-  const [guests, setGuests] = useState();
-  const value = { location, setLocation, guests, setGuests };
+  const [guests, setGuests] = useState(0);
+  const [numberOfAdult,setNumberOfAdult] = useState(0)
+  const [numberOfChildren,setNumberOfChildren] = useState(0)
+  const value = { location, setLocation, guests, setGuests,numberOfAdult,setNumberOfAdult,numberOfChildren,setNumberOfChildren };
 
   return (
     <FilterContext.Provider value={value}>

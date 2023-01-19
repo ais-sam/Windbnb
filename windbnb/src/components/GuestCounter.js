@@ -1,25 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useFilterContext } from '../contexts/FilterContext'
 
-const GuestCounter = ({type}) => {
-  const [adultAge,setAdultAge] = useState(0)
-  const [childrenAge,setChildrenAge] = useState(0)
+const GuestCounter = ({type,guests}) => {
+  const {numberOfAdult,setNumberOfAdult,numberOfChildren,setNumberOfChildren } = useFilterContext()
 
-  const addAge = (type)=>{
-    if (type ==="adult") {
-      setAdultAge(adultAge + 1)
-    } else{
-      setChildrenAge(childrenAge + 1)
+  const addGuest = (type)=>{
+    if ((numberOfAdult + numberOfChildren) < guests ) {
+      if (type ==="adult") {
+        setNumberOfAdult(numberOfAdult + 1)
+      } else{
+        setNumberOfChildren(numberOfChildren + 1)
+      }
+      
     }
   }
   
-  const substractAge = ()=>{
-    if (adultAge > 0 || childrenAge > 0) {
-      if (type ==="adult") {
-        setAdultAge(adultAge - 1)
-      } else{
-        setChildrenAge(childrenAge - 1)
-      }
-        
+  const substractGuest = (type)=>{
+    if (type ==="adult" && numberOfAdult > 0 ) {
+      setNumberOfAdult(numberOfAdult - 1)
+    } else if(type === "children" && numberOfChildren > 0){
+      setNumberOfChildren(numberOfChildren - 1)
     }
   }
   return (
@@ -28,9 +28,9 @@ const GuestCounter = ({type}) => {
         <h4 className='font-bold capitalize'>{type}</h4>
         <span className='text-w-gray-3 font-light mb-2 block'>{type === "adult"?"Ages 13 or above":"Ages 2-12"} </span>
         <div className='flex gap-3'>
-            <button className='border border-w-gray-2 rounded-[4px] w-5 h-5 text-w-gray-2' onClick={()=>addAge(type)}>+</button>
-            <span>{type === 'adult' ? adultAge : childrenAge}</span>
-            <button className='border border-w-gray-2 rounded-[4px] w-5 h-5 text-w-gray-2' onClick={()=>substractAge(type)}>-</button>
+            <button className='border border-w-gray-2 rounded-[4px] w-5 h-5 text-w-gray-2 flex items-center justify-center' onClick={()=>addGuest(type)}>+</button>
+            <span>{type === 'adult' ? numberOfAdult : numberOfChildren}</span>
+            <button className='border border-w-gray-2 rounded-[4px] w-5 h-5 text-w-gray-2 flex items-center justify-center' onClick={()=>substractGuest(type)}>-</button>
         </div>
     </div>
     
