@@ -1,9 +1,9 @@
 import React from 'react'
-import { useFilterContext } from '../contexts/FilterContext'
+import useGlobal from '../contexts/GlobalContext'
 import GuestCounter from './GuestCounter'
 
 const GuestFilter = ({className}) => {
-  const {guests, setGuests} = useFilterContext()
+  const {guests} = useGlobal()
   return (
     <div className={`${className} flex flex-col gap-8 justify-between h-full`} >
       <GuestCounter guests={guests} type="adult"/>

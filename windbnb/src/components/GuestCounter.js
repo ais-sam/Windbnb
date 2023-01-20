@@ -1,8 +1,9 @@
 import React from 'react'
 import { useFilterContext } from '../contexts/FilterContext'
+import useGlobal from '../contexts/GlobalContext'
 
 const GuestCounter = ({type,guests}) => {
-  const {numberOfAdult,setNumberOfAdult,numberOfChildren,setNumberOfChildren } = useFilterContext()
+  const {numberOfAdult,setNumberOfAdult,numberOfChildren,setNumberOfChildren } = useGlobal()
 
   const addGuest = (type)=>{
     if ((numberOfAdult + numberOfChildren) < guests ) {

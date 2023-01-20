@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useFilterContext } from '../contexts/FilterContext';
-import useGlobal from '../contexts/GlobalContext';
+import useGlobal, { GlobalContext } from '../contexts/GlobalContext';
 import Button from './Button';
 import Input from './Input';
 
 const FilterInputs = () => {
-  const {setCities,setGuestFilters} = useGlobal()
-  const {location,setLocation,guests, setGuests} = useFilterContext()
+  const {setCities,setGuestFilters,location,setLocation,guests, setGuests} = useContext(GlobalContext)
+  // const {location,setLocation,guests, setGuests} = useFilterContext()
 
   // show locations
   const showLocations = ()=>{
@@ -24,6 +24,7 @@ const FilterInputs = () => {
     const {value} = e.target
     if (type ==="location") {
       setLocation(value)
+      console.log("location", value)
     } else if(+value >-1){
       setGuests(value)
     }

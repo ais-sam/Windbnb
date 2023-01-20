@@ -10,12 +10,19 @@ export const GlobalProvider = ({childern}) => {
   const [isModal,setModal] = useState(false)
   const [isCities,setCities] = useState(false)
   const [isGuestFilters,setGuestFilters] = useState(false)
-
+  const [choosedLocation,setChoosedLocation] = useState('')
+  const [choosedNumberOfGuests,setChoosedNumberOfGuests] = useState(0)
+  // const [location, setLocation] = useState('');
+  // const [guests, setGuests] = useState(0);
   const value = {
     isModal,setModal,
     isCities,setCities,
-    isGuestFilters,setGuestFilters
-  }
+    isGuestFilters,setGuestFilters,
+    choosedLocation,setChoosedLocation,
+    
+  //   location, setLocation,
+  //   guests, setGuests
+   }
 
   return (
     <GlobalContext.Provider value={value}>
