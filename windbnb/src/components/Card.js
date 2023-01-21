@@ -17,7 +17,7 @@ const Card = ({stay}) => {
                : null}
               <div className='text-w-gray-2 font-normal text-sm p-1'>
                 <span >{type}</span>
-                <span>. {beds} beds</span>
+                <span>{beds && `. ${beds} beds`}</span>
               </div>
             </div>
 
