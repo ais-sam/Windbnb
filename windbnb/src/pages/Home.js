@@ -10,10 +10,12 @@ const Home = () => {
   const {isModal} = useGlobal()
 
   return (
-    <div className="container">
+    <div className="container flex flex-col justify-between h-screen">
       {isModal && <Modal/>}
-      <Navbar/>
-      <CardsGrid/>
+      <div>
+        <Navbar/>
+        <CardsGrid/>
+      </div>
       <Copyright/>
     </div>
   );

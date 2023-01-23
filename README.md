@@ -153,4 +153,4 @@ $ npm start
 
 ## TO DO
 - make the image height for all cards the same.
-- 
+- put inputs fiels inside a form
