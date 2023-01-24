@@ -12,7 +12,7 @@ function App() {
   // show / hide guest filters
   const [isGuestFilters,setGuestFilters] = useState(false)
   // the choosed location
-  const [choosedLocation,setChoosedLocation] = useState('')
+  const [choosedLocation,setChoosedLocation] = useState('Helsinki, Finland')
   // total number of guests
   const [totalGeusts, setTotalGuests] = useState(0)
   // location

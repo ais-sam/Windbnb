@@ -1,6 +1,6 @@
-import { useFilterContext } from '../contexts/FilterContext'
-import useGlobal from '../contexts/GlobalContext'
-import { locations as cities } from '../utils/locations'
+import { useFilterContext } from '../../contexts/FilterContext'
+import useGlobal from '../../contexts/GlobalContext'
+import { locations as cities } from '../../utils/locations'
 import LocationItem from './LocationItem'
 
 

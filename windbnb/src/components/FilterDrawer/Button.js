@@ -1,6 +1,6 @@
 import React from 'react'
-import searchWhite from '../assets/search-white.png'
-import useGlobal from '../contexts/GlobalContext';
+import searchWhite from '../../assets/search-white.png'
+import useGlobal from '../../contexts/GlobalContext';
 
 
 const Button = ({className}) => {

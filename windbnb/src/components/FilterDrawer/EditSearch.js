@@ -1,6 +1,6 @@
 import React from 'react';
-import exit from "../assets/exit.png"
-import useGlobal from '../contexts/GlobalContext';
+import exit from "../../assets/exit.png"
+import useGlobal from '../../contexts/GlobalContext';
 
 const EditSearch = () => {
   const {setModal} = useGlobal()

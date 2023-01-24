@@ -1,5 +1,5 @@
-import search from "../assets/search-pink.png"
-import useGlobal from '../contexts/GlobalContext'
+import search from "../../assets/search-pink.png"
+import useGlobal from '../../contexts/GlobalContext'
 
 
 const SearchBar = () => {

@@ -5,7 +5,7 @@ const Card = ({stay}) => {
   return (
     <div>
       <div className='rounded-3xl overflow-hidden h-64 sm:h-60'>
-        <img src={photo} className="object-top"/>
+        <img src={photo} className="object-cover"/>
       </div>
 
       <div className='mt-3'>

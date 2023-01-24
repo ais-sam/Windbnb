@@ -1,5 +1,5 @@
 import React from 'react'
-import useGlobal from '../contexts/GlobalContext'
+import useGlobal from '../../contexts/GlobalContext'
 import GuestCounter from './GuestCounter'
 
 const GuestFilter = ({className}) => {

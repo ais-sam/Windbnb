@@ -1,8 +1,8 @@
 import React from 'react';
-import CardsGrid from "../components/CardsGrid";
+import CardsGrid from "../components/CardGrid/CardsGrid";
 import Copyright from '../components/Copyright';
 import Modal from '../components/Modal';
-import Navbar from "../components/Navbar";
+import Navbar from "../components/NavBar/Navbar";
 import useGlobal from '../contexts/GlobalContext';
 
 

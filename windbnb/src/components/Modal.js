@@ -1,6 +1,6 @@
 import {useContext} from 'react'
 import {createPortal} from 'react-dom'
-import FilterDrawer from "./FilterDrawer";
+import FilterDrawer from "./FilterDrawer/FilterDrawer";
 import useGlobal, { GlobalContext } from '../contexts/GlobalContext';
 
 

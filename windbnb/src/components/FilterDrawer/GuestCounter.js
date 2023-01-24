@@ -1,6 +1,6 @@
 import React from 'react'
-import { useFilterContext } from '../contexts/FilterContext'
-import useGlobal from '../contexts/GlobalContext'
+import { useFilterContext } from '../../contexts/FilterContext'
+import useGlobal from '../../contexts/GlobalContext'
 
 const GuestCounter = ({type,guests}) => {
   const {numberOfAdult,setNumberOfAdult,numberOfChildren,setNumberOfChildren } = useGlobal()

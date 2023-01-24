@@ -1,7 +1,7 @@
 import React from 'react'
-import stays from "../utils/stays.json"
-import Card from "../components/Card"
-import useGlobal from '../contexts/GlobalContext'
+import stays from "../../utils/stays.json"
+import Card from "./Card"
+import useGlobal from '../../contexts/GlobalContext'
 import Title from './Title'
 
 const CardsGrid = () => {

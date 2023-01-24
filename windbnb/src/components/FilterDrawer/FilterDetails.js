@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { GlobalContext } from '../contexts/GlobalContext';
+import { GlobalContext } from '../../contexts/GlobalContext';
 import Button from './Button';
 import GuestsFilter from "./GuestsFilter"
 import LocationFilters from "./LocationFilters"
