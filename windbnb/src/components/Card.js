@@ -4,7 +4,7 @@ const Card = ({stay}) => {
   const {city,country,superHost,title,rating,maxGuests,type,beds,photo} = stay
   return (
     <div>
-      <div className='rounded-3xl overflow-hidden max-h-64'>
+      <div className='rounded-3xl overflow-hidden h-64 sm:h-60'>
         <img src={photo} className="object-top"/>
       </div>
 
