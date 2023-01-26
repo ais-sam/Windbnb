@@ -1,7 +1,8 @@
 import React from 'react'
-import stays from "../../utils/stays.json"
-import Card from "./Card"
 import useGlobal from '../../contexts/GlobalContext'
+import stays from "../../utils/stays.json"
+import CardGrid from './CardGrid'
+import NoStaysFound from './NoStaysFound'
 import Title from './Title'
 
 const CardsGrid = () => {
@@ -23,14 +24,11 @@ const CardsGrid = () => {
 
   const numberOfStays = (!choosedLocation && !totalGeusts )? "+12" : filtredResults.length
   
+  
   return (
     <div className="mt-6">
       <Title stays ={numberOfStays}/>
-      <div className='mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8'>
-          {filtredResults.map((el,index)=>{
-            return <Card key={index} stay={el}/>
-          })}
-      </div>
+      {filtredResults.length!==0 ? <CardGrid filtredResults={filtredResults}/> : <NoStaysFound/>}
     </div>
   );
 }

@@ -6,12 +6,11 @@ import LocationItem from './LocationItem'
 
 const LocationFilters = ({className}) => {
   const {location,setLocation} = useGlobal()
-  // const {location,setLocation} = useFilterContext()
 
   const filterdCities = location && cities.filter(el=>{
     return el.toLowerCase().includes(location.toLowerCase())
   })
-  // const filterdCities = cities
+
 
   const selectLocation = (selectedCity)=>{
     setLocation(selectedCity)

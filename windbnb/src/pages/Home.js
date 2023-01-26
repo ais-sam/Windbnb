@@ -1,5 +1,5 @@
 import React from 'react';
-import CardsGrid from "../components/CardGrid/CardsGrid";
+import CardsGrid from "../components/Main/Main";
 import Copyright from '../components/Copyright';
 import Modal from '../components/Modal';
 import Navbar from "../components/NavBar/Navbar";
