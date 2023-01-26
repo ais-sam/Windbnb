@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useFilterContext } from '../../contexts/FilterContext';
+
 import useGlobal, { GlobalContext } from '../../contexts/GlobalContext';
 import Button from './Button';
 import Input from './Input';
