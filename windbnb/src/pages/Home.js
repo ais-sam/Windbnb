@@ -10,7 +10,7 @@ const Home = () => {
   const {isModal} = useGlobal()
 
   return (
-    <div className="container flex flex-col justify-between h-screen">
+    <div className="container flex flex-col justify-between min-h-screen">
       {isModal && <Modal/>}
       <div>
         <Navbar/>
