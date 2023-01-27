@@ -1,11 +1,15 @@
 import search from "../../assets/search-pink.png"
 import useGlobal from '../../contexts/GlobalContext'
-
+import { types } from "../../reducer/types"
 
 const SearchBar = () => {
-  const {setModal,setCities,setGuestFilters,choosedLocation,guests,totalGeusts} = useGlobal()
+  const {dispatch,setModal,setCities,setGuestFilters,choosedLocation,guests,totalGeusts} = useGlobal()
+  const {OPEN_MODAL}=types
   const openFilterDrawer = (type)=>{
-    setModal(true)
+    // setModal(true)
+    dispatch({
+      type: OPEN_MODAL
+    })
     if (type ==="location") {
       setGuestFilters(false)
       setCities(true)

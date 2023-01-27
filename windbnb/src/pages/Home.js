@@ -7,11 +7,12 @@ import useGlobal from '../contexts/GlobalContext';
 
 
 const Home = () => {
-  const {isModal} = useGlobal()
+  // const {isModal} = useGlobal()
+  const {state} = useGlobal()
 
   return (
     <div className="container flex flex-col justify-between min-h-screen">
-      {isModal && <Modal/>}
+      {state.isModal && <Modal/>}
       <div>
         <Navbar/>
         <CardsGrid/>

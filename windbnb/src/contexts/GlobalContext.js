@@ -1,12 +1,26 @@
-import { createContext, useContext,useState } from "react";
-
-
+import { createContext, useContext,useReducer,useState } from "react";
+import { globalReducer,initialStates } from "../reducer/globalReducer";
+import { types } from "../reducer/types";
 
 // create context
 export const GlobalContext = createContext()
+const {SHOW_MODAL,SHOW_CITIES,SHOW_GUEST_FILTERS,CHOOSE_LOCATION,CHOOSE_TOTAL_GUESTS,SET_LOCATION,SET_GUESTS,INCREMENT_ADULTS,DECREMENT_ADULTS,INCREMENT_CHILDREN,DECREMENT_CHILDREN} = types
 
 // create context provider
 export const GlobalProvider = ({children}) => {
+  const [state,dispatch] = useReducer(globalReducer,initialStates)
+  // show modal
+  const openModal = ()=> {
+    dispatch({
+      type: SHOW_MODAL,
+    })
+  }
+  // hide modal
+  const closeModal = ()=> {
+    dispatch({
+      type: SHOW_MODAL,
+    })
+  }
   // show / hide modal
   const [isModal,setModal] = useState(false)
   // show / hide cities search results
@@ -27,7 +41,7 @@ export const GlobalProvider = ({children}) => {
   const [numberOfChildren,setNumberOfChildren] = useState(0)
   
   const value = {
-    isModal,setModal,
+    // isModal,setModal,
     isCities,setCities,
     isGuestFilters,setGuestFilters,
     choosedLocation,setChoosedLocation,
@@ -35,8 +49,11 @@ export const GlobalProvider = ({children}) => {
     guests, setGuests,
     numberOfAdult,setNumberOfAdult,
     numberOfChildren,setNumberOfChildren,
-    totalGeusts, setTotalGuests
+    totalGeusts, setTotalGuests,
 
+    // openModal,closeModal,
+    // isModal: state.isModal
+    state,dispatch
   }
 
   return (
