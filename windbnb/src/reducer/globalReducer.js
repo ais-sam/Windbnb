@@ -62,6 +62,11 @@ export const globalReducer = (state, action) => {
         ...state,
         isGuestFilters: false,
       };
+    case CHOOSE_LOCATION:
+      return {
+        ...state,
+        choosedLocation: payload,
+      };
     default:
       throw new Error(`No case for type ${type} found in globalReducer.`);
   }

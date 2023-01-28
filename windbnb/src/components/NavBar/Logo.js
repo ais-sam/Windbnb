@@ -1,12 +1,13 @@
 import React from 'react'
 import logo from "../../assets/logo.svg"
 import useGlobal from '../../contexts/GlobalContext'
-
+import { types } from '../../reducer/types'
 const Logo = ({className}) => {
-  const {setChoosedLocation,setTotalGuests,setGuests,setLocation} = useGlobal()
-  
+  const {dispatch,setChoosedLocation,setTotalGuests,setGuests,setLocation} = useGlobal()
+  const {CHOOSE_LOCATION} = types
   const handleLogoClick = ()=>{
-    setChoosedLocation('')
+    dispatch({type:CHOOSE_LOCATION,payload:""})
+    // setChoosedLocation('')
     setTotalGuests(0)
     setLocation('')
     setGuests(0)

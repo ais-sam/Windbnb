@@ -22,7 +22,7 @@ const Card = ({stay}) => {
             </div>
 
             <div>
-            <i class="fas fa-star text-w-pink"></i>
+            <i className="fas fa-star text-w-pink"></i>
             <span className='text-sm'>{rating}</span>
             </div>
           </div>

@@ -9,18 +9,7 @@ const {SHOW_MODAL,SHOW_CITIES,SHOW_GUEST_FILTERS,CHOOSE_LOCATION,CHOOSE_TOTAL_GU
 // create context provider
 export const GlobalProvider = ({children}) => {
   const [state,dispatch] = useReducer(globalReducer,initialStates)
-  // show modal
-  const openModal = ()=> {
-    dispatch({
-      type: SHOW_MODAL,
-    })
-  }
-  // hide modal
-  const closeModal = ()=> {
-    dispatch({
-      type: SHOW_MODAL,
-    })
-  }
+ 
   // show / hide modal
   const [isModal,setModal] = useState(false)
   // show / hide cities search results
@@ -44,7 +33,7 @@ export const GlobalProvider = ({children}) => {
     // isModal,setModal,
     // isCities,setCities,
     // isGuestFilters,setGuestFilters,
-    choosedLocation,setChoosedLocation,
+    // choosedLocation,setChoosedLocation,
     location, setLocation,
     guests, setGuests,
     numberOfAdult,setNumberOfAdult,

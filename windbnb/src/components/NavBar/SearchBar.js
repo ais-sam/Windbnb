@@ -3,7 +3,7 @@ import useGlobal from '../../contexts/GlobalContext'
 import { types } from "../../reducer/types"
 
 const SearchBar = () => {
-  const {dispatch,setModal,setCities,setGuestFilters,choosedLocation,guests,totalGeusts} = useGlobal()
+  const {dispatch,state,setModal,setCities,setGuestFilters,choosedLocation,guests,totalGeusts} = useGlobal()
   const {OPEN_MODAL,SHOW_CITIES,HIDE_CITIES,SHOW_GUEST_FILTERS,HIDE_GUEST_FILTERS}=types
   const openFilterDrawer = (type)=>{
     // setModal(true)
@@ -30,7 +30,7 @@ const SearchBar = () => {
   }
   return (
     <div className='self-center shadow-sm px-2 flex items-center rounded-2xl font-muli text-sm'>
-      <button className={`py-3 px-2 font-light border-r-[#F2F2F2] border border-l-0 border-y-0 ${!choosedLocation && "text-w-gray-3"}`} onClick={()=>openFilterDrawer("location")}>{choosedLocation || "Add location"}</button>
+      <button className={`py-3 px-2 font-light border-r-[#F2F2F2] border border-l-0 border-y-0 ${!state.choosedLocation && "text-w-gray-3"}`} onClick={()=>openFilterDrawer("location")}>{state.choosedLocation || "Add location"}</button>
       <button className={`py-3 px-2 font-light border-r-[#F2F2F2] border border-l-0 border-y-0  ${!totalGeusts && "text-w-gray-3"}`} onClick={()=>openFilterDrawer("guests")}>{totalGeusts ? `${totalGeusts} guests` : "Add guests"}</button>
       <button className='px-2' onClick={openFilterDrawer}>
         <img src={search} className="w-5" alt=""/>

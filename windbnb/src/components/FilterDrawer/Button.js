@@ -5,9 +5,11 @@ import { types } from '../../reducer/types';
 
 const Button = ({className}) => {
   const {dispatch,setChoosedLocation,setModal,setTotalGuests,location,guests} = useGlobal()
-  const {CLOSE_MODAL}=types
+  const {CLOSE_MODAL,CHOOSE_LOCATION}=types
   const setFilters = ()=>{
-    setChoosedLocation(location)
+    dispatch({ type: CHOOSE_LOCATION,
+       payload: location });
+    // setChoosedLocation(location)
     setTotalGuests(guests)
     dispatch({type:CLOSE_MODAL})
     // setModal(false)

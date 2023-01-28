@@ -5,8 +5,9 @@ import CardGrid from './CardGrid'
 import NoStaysFound from './NoStaysFound'
 import Title from './Title'
 
-const CardsGrid = () => {
-  const {choosedLocation,totalGeusts} = useGlobal()
+const Main = () => {
+  const {state,totalGeusts} = useGlobal()
+  const {choosedLocation} = state
   const [city,country] = choosedLocation.split(',')
 
   const filtredResults = stays.filter(stay=>{
@@ -33,4 +34,4 @@ const CardsGrid = () => {
   );
 }
 
-export default CardsGrid
+export default Main
