@@ -42,8 +42,8 @@ export const GlobalProvider = ({children}) => {
   
   const value = {
     // isModal,setModal,
-    isCities,setCities,
-    isGuestFilters,setGuestFilters,
+    // isCities,setCities,
+    // isGuestFilters,setGuestFilters,
     choosedLocation,setChoosedLocation,
     location, setLocation,
     guests, setGuests,

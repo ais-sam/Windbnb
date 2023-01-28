@@ -16,7 +16,9 @@ const {
   OPEN_MODAL,
   CLOSE_MODAL,
   SHOW_CITIES,
+  HIDE_CITIES,
   SHOW_GUEST_FILTERS,
+  HIDE_GUEST_FILTERS,
   CHOOSE_LOCATION,
   CHOOSE_TOTAL_GUESTS,
   SET_LOCATION,
@@ -39,6 +41,26 @@ export const globalReducer = (state, action) => {
       return {
         ...state,
         isModal: false,
+      };
+    case SHOW_CITIES:
+      return {
+        ...state,
+        isCities: true,
+      };
+    case HIDE_CITIES:
+      return {
+        ...state,
+        isCities: false,
+      };
+    case SHOW_GUEST_FILTERS:
+      return {
+        ...state,
+        isGuestFilters: true,
+      };
+    case HIDE_GUEST_FILTERS:
+      return {
+        ...state,
+        isGuestFilters: false,
       };
     default:
       throw new Error(`No case for type ${type} found in globalReducer.`);

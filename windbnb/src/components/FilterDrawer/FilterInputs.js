@@ -1,30 +1,35 @@
 import React, { useContext } from 'react';
 
 import useGlobal, { GlobalContext } from '../../contexts/GlobalContext';
+import { types } from '../../reducer/types';
 import Button from './Button';
 import Input from './Input';
 
+const {SHOW_CITIES,HIDE_CITIES,SHOW_GUEST_FILTERS,HIDE_GUEST_FILTERS,CLOSE_MODAL} = types
 const FilterInputs = () => {
   const {setCities,setGuestFilters,location,setLocation,guests, setGuests,setChoosedLocation,setModal,setTotalGuests} = useContext(GlobalContext)
-  // const {location,setLocation,guests, setGuests} = useFilterContext()
+  const {dispatch} = useGlobal()
 
   // show locations
   const showLocations = ()=>{
-    setCities(true)
-    setGuestFilters(false)
+    dispatch({type:SHOW_CITIES})
+    dispatch({type:HIDE_GUEST_FILTERS})
+    // setCities(true)
+    // setGuestFilters(false)
   }
   
   // show guest filters
   const showGuestFilters = ()=>{
-    setGuestFilters(true)
-    setCities(false)
+    dispatch({type:SHOW_GUEST_FILTERS})
+    dispatch({type:HIDE_CITIES})
+    // setGuestFilters(true)
+    // setCities(false)
   }
 
   const handleChange = (e,type)=>{
     const {value} = e.target
     if (type ==="location") {
       setLocation(value)
-      console.log("location", value)
     } else if(+value >-1){
       setGuests(value)
     }
@@ -34,7 +39,8 @@ const FilterInputs = () => {
     e.preventDefault()
     setChoosedLocation(location)
     setTotalGuests(guests)
-    setModal(false)
+    dispatch({type:CLOSE_MODAL})
+    // setModal(false)
   }
 
   return (

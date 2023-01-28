@@ -4,21 +4,27 @@ import { types } from "../../reducer/types"
 
 const SearchBar = () => {
   const {dispatch,setModal,setCities,setGuestFilters,choosedLocation,guests,totalGeusts} = useGlobal()
-  const {OPEN_MODAL}=types
+  const {OPEN_MODAL,SHOW_CITIES,HIDE_CITIES,SHOW_GUEST_FILTERS,HIDE_GUEST_FILTERS}=types
   const openFilterDrawer = (type)=>{
     // setModal(true)
     dispatch({
       type: OPEN_MODAL
     })
     if (type ==="location") {
-      setGuestFilters(false)
-      setCities(true)
+      dispatch({type:SHOW_CITIES})
+      dispatch({type:HIDE_GUEST_FILTERS})
+      // setGuestFilters(false)
+      // setCities(true)
     }else if(type === "guests"){
-      setCities(false)
-      setGuestFilters(true)
+      dispatch({type:SHOW_GUEST_FILTERS})
+      dispatch({type:HIDE_CITIES})
+      // setCities(false)
+      // setGuestFilters(true)
     }else{
-      setCities(false)
-      setGuestFilters(false)
+      dispatch({type:HIDE_GUEST_FILTERS})
+      dispatch({type:HIDE_CITIES})
+      // setCities(false)
+      // setGuestFilters(false)
     }
 
   }

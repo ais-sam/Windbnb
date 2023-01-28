@@ -1,15 +1,16 @@
 import React from 'react'
 import searchWhite from '../../assets/search-white.png'
 import useGlobal from '../../contexts/GlobalContext';
-
+import { types } from '../../reducer/types';
 
 const Button = ({className}) => {
-  const {setChoosedLocation,setModal,setTotalGuests,location,guests} = useGlobal()
-  
+  const {dispatch,setChoosedLocation,setModal,setTotalGuests,location,guests} = useGlobal()
+  const {CLOSE_MODAL}=types
   const setFilters = ()=>{
     setChoosedLocation(location)
     setTotalGuests(guests)
-    setModal(false)
+    dispatch({type:CLOSE_MODAL})
+    // setModal(false)
   }
   return (
     <>
