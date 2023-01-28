@@ -5,10 +5,9 @@ import { types } from '../../reducer/types';
 import Button from './Button';
 import Input from './Input';
 
-const {SHOW_CITIES,HIDE_CITIES,SHOW_GUEST_FILTERS,HIDE_GUEST_FILTERS,CLOSE_MODAL} = types
+const {SHOW_CITIES,HIDE_CITIES,SHOW_GUEST_FILTERS,HIDE_GUEST_FILTERS,CLOSE_MODAL,CHOOSE_TOTAL_GUESTS} = types
 const FilterInputs = () => {
-  const {setCities,setGuestFilters,location,setLocation,guests, setGuests,setChoosedLocation,setModal,setTotalGuests} = useContext(GlobalContext)
-  const {dispatch} = useGlobal()
+  const {dispatch,state,setCities,setGuestFilters,location,setLocation,guests, setGuests,setChoosedLocation,setModal,setTotalGuests} = useContext(GlobalContext)
 
   // show locations
   const showLocations = ()=>{
@@ -38,7 +37,9 @@ const FilterInputs = () => {
   const setFilters = (e)=>{
     e.preventDefault()
     setChoosedLocation(location)
-    setTotalGuests(guests)
+    dispatch({type:CHOOSE_TOTAL_GUESTS,
+      payload: guests})
+    // setTotalGuests(guests)
     dispatch({type:CLOSE_MODAL})
     // setModal(false)
   }

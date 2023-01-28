@@ -34,11 +34,11 @@ export const GlobalProvider = ({children}) => {
     // isCities,setCities,
     // isGuestFilters,setGuestFilters,
     // choosedLocation,setChoosedLocation,
+    // totalGeusts, setTotalGuests,
     location, setLocation,
     guests, setGuests,
     numberOfAdult,setNumberOfAdult,
     numberOfChildren,setNumberOfChildren,
-    totalGeusts, setTotalGuests,
 
     // openModal,closeModal,
     // isModal: state.isModal

@@ -3,7 +3,8 @@ import useGlobal from '../../contexts/GlobalContext'
 import { types } from "../../reducer/types"
 
 const SearchBar = () => {
-  const {dispatch,state,setModal,setCities,setGuestFilters,choosedLocation,guests,totalGeusts} = useGlobal()
+  const {dispatch,state} = useGlobal()
+  const {totalGeusts} = state
   const {OPEN_MODAL,SHOW_CITIES,HIDE_CITIES,SHOW_GUEST_FILTERS,HIDE_GUEST_FILTERS}=types
   const openFilterDrawer = (type)=>{
     // setModal(true)

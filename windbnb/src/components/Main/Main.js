@@ -6,8 +6,8 @@ import NoStaysFound from './NoStaysFound'
 import Title from './Title'
 
 const Main = () => {
-  const {state,totalGeusts} = useGlobal()
-  const {choosedLocation} = state
+  const {state} = useGlobal()
+  const {choosedLocation,totalGeusts} = state
   const [city,country] = choosedLocation.split(',')
 
   const filtredResults = stays.filter(stay=>{
