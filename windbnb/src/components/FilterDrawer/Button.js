@@ -4,9 +4,9 @@ import useGlobal from '../../contexts/GlobalContext';
 import { types } from '../../reducer/types';
 
 const Button = ({className}) => {
-  const {dispatch,state,setChoosedLocation,setModal,setTotalGuests,guests} = useGlobal()
+  const {dispatch,state,setChoosedLocation,setModal,setTotalGuests} = useGlobal()
   const {CLOSE_MODAL,CHOOSE_LOCATION,CHOOSE_TOTAL_GUESTS}=types
-  const {location} = state
+  const {location,guests} = state
   const setFilters = ()=>{
     dispatch({ type: CHOOSE_LOCATION,
        payload: location });

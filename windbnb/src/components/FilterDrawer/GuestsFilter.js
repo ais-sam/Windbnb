@@ -3,7 +3,8 @@ import useGlobal from '../../contexts/GlobalContext'
 import GuestCounter from './GuestCounter'
 
 const GuestFilter = ({className}) => {
-  const {guests} = useGlobal()
+  const {state} = useGlobal()
+  const {guests} = state
   return (
     <div className={`${className} flex flex-col gap-8 justify-between h-full`} >
       <GuestCounter guests={guests} type="adult"/>

@@ -77,6 +77,11 @@ export const globalReducer = (state, action) => {
         ...state,
         location: payload,
       };
+      case SET_GUESTS:
+        return {
+          ...state,
+          guests: payload,
+        };
     default:
       throw new Error(`No case for type ${type} found in globalReducer.`);
   }
