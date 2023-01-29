@@ -35,7 +35,7 @@ export const GlobalProvider = ({children}) => {
     // isGuestFilters,setGuestFilters,
     // choosedLocation,setChoosedLocation,
     // totalGeusts, setTotalGuests,
-    location, setLocation,
+    // location, setLocation,
     guests, setGuests,
     numberOfAdult,setNumberOfAdult,
     numberOfChildren,setNumberOfChildren,

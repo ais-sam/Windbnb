@@ -4,7 +4,7 @@ import useGlobal from '../../contexts/GlobalContext'
 import { types } from '../../reducer/types'
 const Logo = ({className}) => {
   const {dispatch,setChoosedLocation,setTotalGuests,setGuests,setLocation} = useGlobal()
-  const {CHOOSE_LOCATION,CHOOSE_TOTAL_GUESTS} = types
+  const {CHOOSE_LOCATION,CHOOSE_TOTAL_GUESTS,SET_LOCATION} = types
   const handleLogoClick = ()=>{
     dispatch({type:CHOOSE_LOCATION,payload:""})
     // setChoosedLocation('')
@@ -13,7 +13,8 @@ const Logo = ({className}) => {
       payload: 0}
       )
     // setTotalGuests(0)
-    setLocation('')
+    dispatch({type:SET_LOCATION,payload: ''})
+    // setLocation('')
     setGuests(0)
   }
   return (
