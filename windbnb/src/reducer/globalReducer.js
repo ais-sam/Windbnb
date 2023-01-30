@@ -82,6 +82,16 @@ export const globalReducer = (state, action) => {
           ...state,
           guests: payload,
         };
+        case INCREMENT_ADULTS:
+          return {
+            ...state,
+            numberOfAdult: payload,
+          };
+          case DECREMENT_ADULTS:
+            return {
+              ...state,
+              numberOfAdult: payload,
+            };
     default:
       throw new Error(`No case for type ${type} found in globalReducer.`);
   }
