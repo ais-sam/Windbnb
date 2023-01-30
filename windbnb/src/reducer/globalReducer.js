@@ -82,7 +82,7 @@ export const globalReducer = (state, action) => {
           ...state,
           guests: payload,
         };
-        case INCREMENT_ADULTS:
+        case (INCREMENT_ADULTS || DECREMENT_ADULTS):
           return {
             ...state,
             numberOfAdult: payload,
@@ -92,6 +92,17 @@ export const globalReducer = (state, action) => {
               ...state,
               numberOfAdult: payload,
             };
+          
+            case INCREMENT_CHILDREN:
+              return {
+                ...state,
+                numberOfChildren: payload,
+              };
+              case DECREMENT_CHILDREN:
+              return {
+                ...state,
+                numberOfChildren: payload,
+              };
     default:
       throw new Error(`No case for type ${type} found in globalReducer.`);
   }

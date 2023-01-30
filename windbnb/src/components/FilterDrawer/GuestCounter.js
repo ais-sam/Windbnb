@@ -3,15 +3,17 @@ import useGlobal from '../../contexts/GlobalContext'
 import { types } from '../../reducer/types'
 
 const GuestCounter = ({type,guests}) => {
-  const { INCREMENT_ADULTS,DECREMENT_ADULTS}= types
-  const {state,dispatch,setNumberOfAdult,numberOfChildren,setNumberOfChildren } = useGlobal()
-  const {numberOfAdult} = state
+  const { INCREMENT_ADULTS,DECREMENT_ADULTS,INCREMENT_CHILDREN,DECREMENT_CHILDREN}= types
+  const {state,dispatch} = useGlobal()
+  const {numberOfAdult,numberOfChildren} = state
   const addGuest = (type)=>{
     if ((numberOfAdult + numberOfChildren) < guests ) {
       if (type ==="adult") {
         dispatch({type:INCREMENT_ADULTS,payload:numberOfAdult+1})
       } else{
-        setNumberOfChildren(numberOfChildren + 1)
+        // setNumberOfChildren(numberOfChildren + 1)
+        dispatch({type:INCREMENT_CHILDREN,payload:numberOfChildren+1})
+
       }
       
     }
@@ -21,7 +23,9 @@ const GuestCounter = ({type,guests}) => {
     if (type ==="adult" && numberOfAdult > 0 ) {
       dispatch({type:DECREMENT_ADULTS,payload:numberOfAdult-1})
     } else if(type === "children" && numberOfChildren > 0){
-      setNumberOfChildren(numberOfChildren - 1)
+      // setNumberOfChildren(numberOfChildren - 1)
+      dispatch({type:DECREMENT_CHILDREN,payload:numberOfChildren-1})
+
     }
   }
   return (

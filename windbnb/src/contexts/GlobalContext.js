@@ -38,7 +38,7 @@ export const GlobalProvider = ({children}) => {
     // location, setLocation,
     // guests, setGuests,
     // numberOfAdult,setNumberOfAdult,
-    numberOfChildren,setNumberOfChildren,
+    // numberOfChildren,setNumberOfChildren,
 
     // openModal,closeModal,
     // isModal: state.isModal
