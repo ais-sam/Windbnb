@@ -1,11 +1,10 @@
-import {useContext} from 'react'
-import {createPortal} from 'react-dom'
-import FilterDrawer from "./FilterDrawer/FilterDrawer";
-import useGlobal, { GlobalContext } from '../contexts/GlobalContext';
+import { useContext } from 'react';
+import { createPortal } from 'react-dom';
+import { GlobalContext } from '../contexts/GlobalContext';
 import { types } from '../reducer/types';
+import FilterDrawer from "./FilterDrawer/FilterDrawer";
 
-const Modal = ({onClose}) => {
-  // const {showFilter} = useGlobal()
+const Modal = () => {
   const {CLOSE_MODAL}=types
   const {dispatch} = useContext(GlobalContext)
     const Backdrop = ({children})=>{

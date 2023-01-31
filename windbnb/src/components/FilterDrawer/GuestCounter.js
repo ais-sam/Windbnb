@@ -11,9 +11,7 @@ const GuestCounter = ({type,guests}) => {
       if (type ==="adult") {
         dispatch({type:INCREMENT_ADULTS,payload:numberOfAdult+1})
       } else{
-        // setNumberOfChildren(numberOfChildren + 1)
         dispatch({type:INCREMENT_CHILDREN,payload:numberOfChildren+1})
-
       }
       
     }
@@ -23,7 +21,6 @@ const GuestCounter = ({type,guests}) => {
     if (type ==="adult" && numberOfAdult > 0 ) {
       dispatch({type:DECREMENT_ADULTS,payload:numberOfAdult-1})
     } else if(type === "children" && numberOfChildren > 0){
-      // setNumberOfChildren(numberOfChildren - 1)
       dispatch({type:DECREMENT_CHILDREN,payload:numberOfChildren-1})
 
     }

@@ -15,7 +15,6 @@ const LocationFilters = ({className}) => {
 
   const selectLocation = (selectedCity)=>{
     dispatch({type:SET_LOCATION,payload:selectedCity})
-    // setLocation(selectedCity)
   }
   return (
     <ul className={`${className} font-muli text-w-gray md:pl-4`}>

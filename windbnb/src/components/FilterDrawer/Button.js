@@ -1,21 +1,19 @@
-import React from 'react'
-import searchWhite from '../../assets/search-white.png'
+import React from 'react';
+import searchWhite from '../../assets/search-white.png';
 import useGlobal from '../../contexts/GlobalContext';
 import { types } from '../../reducer/types';
 
 const Button = ({className}) => {
-  const {dispatch,state,setChoosedLocation,setModal,setTotalGuests} = useGlobal()
+  const {dispatch,state} = useGlobal()
   const {CLOSE_MODAL,CHOOSE_LOCATION,CHOOSE_TOTAL_GUESTS}=types
   const {location,guests} = state
   const setFilters = ()=>{
     dispatch({ type: CHOOSE_LOCATION,
        payload: location });
-    // setChoosedLocation(location)
     dispatch({type:CHOOSE_TOTAL_GUESTS,
     payload: guests})
-    // setTotalGuests(guests)
     dispatch({type:CLOSE_MODAL})
-    // setModal(false)
+
   }
   return (
     <>

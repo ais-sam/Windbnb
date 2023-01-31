@@ -1,15 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 import Button from './Button';
-import GuestsFilter from "./GuestsFilter"
-import LocationFilters from "./LocationFilters"
+import GuestsFilter from "./GuestsFilter";
+import LocationFilters from "./LocationFilters";
 
 
 const FilterDetails = () => {
-    // const {isCities,isGuestFilters} = useContext(GlobalContext)
     const {state} = useContext(GlobalContext)
   return (
-    // <div className="container flex flex-col md:flex-row  md:items-center gap-4 mt-10 pl-6 md:pl-0">
     <div className="container mt-10 pl-6 md:pl-0">
       <div className='grid grid-cols-12'>
         {state.isCities && <LocationFilters className="col-start-1 col-span-6" />}
