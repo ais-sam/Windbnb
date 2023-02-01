@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">Windbnb</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,15 +8,15 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://wwindbnb1.netlify.app/" target="_blank" >
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/ais-sam/Windbnb" target="_blank">
       Solution
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD">
+    <a href="https://devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD" target="_blank">
       Challenge
     </a>
   </h3>
@@ -27,7 +27,7 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](./public//screenshot.png)
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
@@ -41,7 +41,7 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 
 - [React](https://reactjs.org/)
 - [Tailwind](https://tailwindcss.com/)
-- Context Api and Reducer for state managment
+- Context Api and Reducer for state management
 
 ## Features
 
@@ -75,6 +75,6 @@ $ npm start
 
 ## Contact
 
-- GitHub [@ais-sam](https://{github.com/ais-sam})
-- LinkedIn [Abderrahmane Alioua](https://{twitter.com/your-username})
+- GitHub [@ais-sam](https://github.com/ais-sam)
+- LinkedIn [Abderrahmane Alioua](https://www.linkedin.com/in/abderrahmane-alioua)
 
